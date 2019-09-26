@@ -1,0 +1,97 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E4018F09-BF81-4F86-A5A8-96B9CA458799}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SipTunnelWin</RootNamespace>
+    <AssemblyName>SipTunnelWin</AssemblyName>
+    <StartupObject>SipTunnelWin.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PLAT_WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;PLAT_WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SipTunnelCommon\CommandLineParser.cs">
+      <Link>CommandLineParser.cs</Link>
+    </Compile>
+    <Compile Include="..\SipTunnelCommon\CommandLineParserException.cs">
+      <Link>CommandLineParserException.cs</Link>
+    </Compile>
+    <Compile Include="..\SipTunnelCommon\Interfaces.cs">
+      <Link>Interfaces.cs</Link>
+    </Compile>
+    <Compile Include="..\SipTunnelCommon\MessageEventArgs.cs">
+      <Link>MessageEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\SipTunnelCommon\ProgramSettings.cs">
+      <Link>ProgramSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\SipTunnelCommon\ProgramSettingsException.cs">
+      <Link>ProgramSettingsException.cs</Link>
+    </Compile>
+    <Compile Include="..\SipTunnelCommon\ServerListener.cs">
+      <Link>ServerListener.cs</Link>
+    </Compile>
+    <Compile Include="..\SipTunnelCommon\SipProxyBase.cs">
+      <Link>SipProxyBase.cs</Link>
+    </Compile>
+    <Compile Include="..\SipTunnelCommon\SipProxyClient.cs">
+      <Link>SipProxyClient.cs</Link>
+    </Compile>
+    <Compile Include="..\SipTunnelCommon\SipProxyClientException.cs">
+      <Link>SipProxyClientException.cs</Link>
+    </Compile>
+    <Compile Include="..\SipTunnelCommon\SipProxyException.cs">
+      <Link>SipProxyException.cs</Link>
+    </Compile>
+    <Compile Include="..\SipTunnelCommon\SipProxyServer.cs">
+      <Link>SipProxyServer.cs</Link>
+    </Compile>
+    <Compile Include="..\SipTunnelCommon\SipProxyServerException.cs">
+      <Link>SipProxyServerException.cs</Link>
+    </Compile>
+    <Compile Include="..\SipTunnelCommon\SipTransportBase.cs">
+      <Link>SipTransportBase.cs</Link>
+    </Compile>
+    <Compile Include="..\SipTunnelCommon\SipTransportTcp.cs">
+      <Link>SipTransportTcp.cs</Link>
+    </Compile>
+    <Compile Include="..\SipTunnelCommon\SipTransportUdp.cs">
+      <Link>SipTransportUdp.cs</Link>
+    </Compile>
+    <Compile Include="..\SipTunnelCommon\SoundProxy.cs">
+      <Link>SoundProxy.cs</Link>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
